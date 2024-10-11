@@ -6,6 +6,7 @@ return {
 	{ "rebelot/kanagawa.nvim" },
 	{ "kaiuri/nvim-juliana" },
 	{ "sainnhe/gruvbox-material" },
+	{ "ful1e5/onedark.nvim" },
 	-- add no bg plugin
 	{ "xiyaowong/transparent.nvim" },
 	-- Configure LazyVim to load a certain scheme
