@@ -26,5 +26,9 @@ end)
 -- remap("n", "<leader>b", ":bd<CR>")
 
 -- quick buffer switching
-remap("n", "<leader>[", ":bp<CR>")
-remap("n", "<leader>]", ":bn<CR>")
+remap("n", "<leader>[", ":bp<CR>", { silent = true, desc = "Go to previous buffer" })
+remap("n", "<leader>]", ":bn<CR>", { silent = true, desc = "Go to next buffer" })
+
+-- neotree config
+local tree = require("neo-tree")
+remap("n", "kb", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle Neo-tree" })
