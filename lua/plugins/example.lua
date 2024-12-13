@@ -9,8 +9,6 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-	-- add gruvbox
-	{ "ellisonleao/gruvbox.nvim" },
 
 	-- Configure LazyVim to load gruvbox
 	{
@@ -30,6 +28,7 @@ return {
 	-- disable trouble
 	{ "folke/trouble.nvim", enabled = false },
 
+	--[[
 	-- override nvim-cmp and add cmp-emoji
 	{
 		"hrsh7th/nvim-cmp",
@@ -39,6 +38,7 @@ return {
 			table.insert(opts.sources, { name = "emoji" })
 		end,
 	},
+  --]]
 
 	-- change some telescope options and a keymap to browse plugin files
 	{
@@ -63,6 +63,7 @@ return {
 		},
 	},
 
+	--[[
 	-- add pyright to lspconfig
 	{
 		"neovim/nvim-lspconfig",
@@ -75,7 +76,8 @@ return {
 			},
 		},
 	},
-
+--]]
+	--[[
 	-- add tsserver and setup with typescript.nvim instead of lspconfig
 	{
 		"neovim/nvim-lspconfig",
@@ -110,6 +112,8 @@ return {
 			},
 		},
 	},
+
+  --]]
 
 	-- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
 	-- treesitter, mason and typescript.nvim. So instead of the above, you can use:
@@ -180,15 +184,17 @@ return {
 	{ import = "lazyvim.plugins.extras.lang.json" },
 
 	-- add any tools you want to have installed below
-	{
+	--[[
+  {
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
-				"stylua",
+				-- "stylua",
 				"shellcheck",
 				"shfmt",
 				"flake8",
 			},
 		},
 	},
+  --]]
 }
